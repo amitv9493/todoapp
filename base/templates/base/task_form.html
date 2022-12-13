@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% comment %} <h3>Task Form</h3> {% endcomment %}
+<div class='back-header'>
+    <div class="back-btn">&#8592;</div>
+    <a href=" {% url 'taskist' %} ">Go back</a>
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input  class='btn'type="submit" value="Submit">
+
+</form>
+{% endblock content %}
